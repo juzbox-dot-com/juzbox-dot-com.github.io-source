@@ -12,10 +12,13 @@ notifications:
   email:
     on_success: always
     on_failure: always
+git:
+  submodules: false
 env:
   global:
   - secure: "H1s1b90h/p0qpVXaJ1ztrRPztlo4pwiCrzyJJhhPWkmxGatdbKAMPbLjppvhcZOh/uSrVml1KymsNoL/etK/NquNkJqVhR7TOpAnjsdULFSpwGe7Gvp/gI8nUiOIc5GXmlf3QDYw6C1QDhqajnXW6M7i0vu/fBRhW8WX15IYMIM="
 before_install:
+  - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
   - git submodule update --init --recursive
 after_success: bash deploy.sh
 
