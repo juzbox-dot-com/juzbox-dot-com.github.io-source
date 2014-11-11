@@ -1,8 +1,8 @@
-Title: Pericanを使ったサイト構築手順
+Title: Pelicanを使ったサイト構築手順
 Category: misc
-Tags: perican
+Tags: pelican
 
-Pelicanでblogを構築しようなんて考えるのはたいていpython使いでしょうから，こんな記事を書いてもどうするんだ，とも思いますが，自分用の備忘録も込めて，Pelicanでのblog構築の手順を簡単にまとめておきます．環境はOSX 10.10 + Homebrewで入れたPython 3.4.2 + Perican 3.5です．
+Pelicanでblogを構築しようなんて考えるのはたいていpython使いでしょうから，こんな記事を書いてもどうするんだ，とも思いますが，自分用の備忘録も込めて，Pelicanでのblog構築の手順を簡単にまとめておきます．環境はOSX 10.10 + Homebrewで入れたPython 3.4.2 + Pelican 3.5です．
 
 # インストール
 インストールは http://docs.getpelican.com/en/3.5.0/install.html に従えばいい感じです．
@@ -29,7 +29,7 @@ $ pelican-quickstart
 THEME = 'themes/pelican-elegant'
 ```
 
-のように，`pelicanconf.py`からの相対パスでテーマの場所を記述します．（上述した`perican-theme`というコマンドもありますが，使う必要は全くありません．）
+のように，`pelicanconf.py`からの相対パスでテーマの場所を記述します．（上述した`pelican-theme`というコマンドもありますが，使う必要は全くありません．）
 プラグインについては，`PLUGIN_PATH`にプラグインたちが入ったディレクトリを指定し，`PLUGINS`にプラグイン名文字列のリストを指定します．
 githubにpelican公式の[pelican-themes](https://github.com/getpelican/pelican-themes), [pelican-plugins](https://github.com/getpelican/pelican-plugins)というリポジトリがあって，そこに多くのテーマやプラグインが集められています．
 
@@ -69,4 +69,4 @@ FILENAME_METADATA = '(?P<date>\d{4}-\d{2}-\d{2})_(?P<slug>.*)'
 # 最後に
 このblogの生成元になっているソースを[githubのリポジトリ](https://github.com/juzbox-dot-com/juzbox-dot-com.github.io-source)に載せてあるので，もし必要があれば参照してください．また， https://github.com/getpelican/pelican/wiki/Powered-by-Pelican にPelicanを使っているサイトとそのソースが紹介されています．あの kernel.org も実はPelicanを使っていたのですね．
 
-それでは，皆様もPericanで楽しいblogライフをお過ごしください！
+それでは，皆様もPelicanで楽しいblogライフをお過ごしください！
