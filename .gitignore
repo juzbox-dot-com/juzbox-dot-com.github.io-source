@@ -1,4 +1,6 @@
 *.pid
 *.pyc
 *.swp
+*.DS_Store
 output/
+cache/
