@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /static/
+Sitemap: http://www.juzbox.com/sitemap.xml

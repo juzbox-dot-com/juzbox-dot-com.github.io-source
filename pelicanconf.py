@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'M K'
 SITENAME = 'Juzbox.com'
-#SITEURL = 'www.juzbox.com'
+SITEURL = '/'
 THEME = 'themes/pelican-elegant'
 
 PATH = 'content'
@@ -17,7 +17,12 @@ PLUGINS = ['sitemap', 'extract_toc', 'tipue_search']
 MD_EXTENSIONS = ['codehilite(css_class=highlight)', 'extra', 'headerid', 'toc', 'linkify', 'fenced_code', 'del_ins', 'tables']
 
 DIRECT_TEMPLATES = (('index', 'tags', 'categories','archives', 'search', '404'))
-STATIC_PATHS = ['theme/images', 'images']
+STATIC_PATHS = ['theme/images', 'static']
+
+EXTRA_PATH_METADATA = {
+    'static/robots.txt': {'path': 'robots.txt'},
+    'static/CNAME': {'path': 'CNAME'}
+}
 
 SITEMAP = {
     'format': 'xml',
@@ -40,7 +45,7 @@ AUTHOR_SAVE_AS = ''
 # elegant theme specific settings
 LANDING_PAGE_ABOUT = {
     'title': 'Hello, world!',
-    'details': ''
+    'details': '神経科学とコンピュータに興味がある医学生の日記兼備忘録．'
 }
 
 FILENAME_METADATA = '(?P<date>\d{4}-\d{2}-\d{2})_(?P<slug>.*)'
