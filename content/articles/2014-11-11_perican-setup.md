@@ -7,8 +7,8 @@ Pelicanでblogを構築しようなんて考えるのはたいていpython使い
 # インストール
 インストールは http://docs.getpelican.com/en/3.5.0/install.html に従えばいい感じです．
 
-```
-$ pip3 install pelican Markdown typogrify BeautifulSoup4
+```bash
+$ pip install pelican Markdown typogrify BeautifulSoup4
 ```
 
 bs4は，僕が今回使ったElegantというテーマで必要なもので，テーマによっては不要です．ちなみに，テーマを管理する`pelican-themes`コマンドがsite-packagesにテーマをぶち込んだりしているのを見るにつけ，pelicanの開発者たちはvirtualenvを使うことを前提にしている感があるので，素直にvirtualenvの中でやるのが無難そうです．
@@ -16,7 +16,7 @@ bs4は，僕が今回使ったElegantというテーマで必要なもので，�
 # ひな形の作成
 インストールが終わったら，適当なディレクトリを掘って
 
-```
+```bash
 $ pelican-quickstart
 ```
 
@@ -25,7 +25,7 @@ $ pelican-quickstart
 # 設定・プラグイン・テーマ
 設定は基本的に`pelicanconf.py`に記述していきます．こいつは単なるpythonファイルなので，当然ですがもし中でいろいろやりたければ，好き放題にいろいろできます．また，テーマとプラグインを使えるようにしておきましょう．テーマについては，
 
-```
+```python
 THEME = 'themes/pelican-elegant'
 ```
 
@@ -60,13 +60,13 @@ Tags: pelican, sparrow, duck
 
 palicanconf.pyに
 
-```
+```python
 FILENAME_METADATA = '(?P<date>\d{4}-\d{2}-\d{2})_(?P<slug>.*)'
 ```
 
 と書いておくと，`2014-11-11_my-great-post.md`というファイル名があったときに，そこからdateとslugのメタデータを抽出してくれます．
 
 # 最後に
-このblogの生成元になっているソースをgithubに載せてあるので，もし必要があれば参照してください．また， https://github.com/getpelican/pelican/wiki/Powered-by-Pelican にPelicanを使っているサイトとそのソースが紹介されています．あのkernel.orgも実はPelicanを使っていたのですね．
+このblogの生成元になっているソースを[githubのリポジトリ](https://github.com/juzbox-dot-com/juzbox-dot-com.github.io-source)に載せてあるので，もし必要があれば参照してください．また， https://github.com/getpelican/pelican/wiki/Powered-by-Pelican にPelicanを使っているサイトとそのソースが紹介されています．あの kernel.org も実はPelicanを使っていたのですね．
 
 それでは，皆様もPericanで楽しいblogライフをお過ごしください！
