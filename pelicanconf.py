@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'M K'
 SITENAME = 'Juzbox.com'
-SITEURL = '/'
+SITEURL = 'www.juzbox.com'
 THEME = 'themes/pelican-elegant'
 
 PATH = 'content'
