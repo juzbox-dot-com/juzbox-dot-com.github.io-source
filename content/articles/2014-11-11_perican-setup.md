@@ -1,6 +1,6 @@
 Title: Pericanを使ったサイト構築手順
 Category: misc
-Tags: pelican
+Tags: perican
 
 Pelicanでblogを構築しようなんて考えるのはたいていpython使いでしょうから，こんな記事を書いてもどうするんだ，とも思いますが，自分用の備忘録も込めて，Pelicanでのblog構築の手順を簡単にまとめておきます．環境はOSX 10.10 + Homebrewで入れたPython 3.4.2 + Perican 3.5です．
 
