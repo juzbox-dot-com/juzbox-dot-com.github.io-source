@@ -1,16 +1,49 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
 AUTHOR = 'M K'
 SITENAME = 'Juzbox.com'
-SITEURL = ''
+#SITEURL = 'www.juzbox.com'
+THEME = 'themes/pelican-elegant'
 
 PATH = 'content'
-
-TIMEZONE = 'Europe/Paris'
-
+TIMEZONE = 'Asia/Tokyo'
 DEFAULT_LANG = 'ja'
+
+# Plugins
+PLUGIN_PATHS = ['plugins']
+PLUGINS = ['sitemap', 'extract_toc', 'tipue_search']
+MD_EXTENSIONS = ['codehilite(css_class=highlight)', 'extra', 'headerid', 'toc', 'linkify', 'fenced_code', 'del_ins', 'tables']
+
+DIRECT_TEMPLATES = (('index', 'tags', 'categories','archives', 'search', '404'))
+STATIC_PATHS = ['theme/images', 'images']
+
+SITEMAP = {
+    'format': 'xml',
+    'changefreqs': {
+        'articles': 'monthly',
+        'indexes': 'daily',
+        'pages': 'monthly'
+    },
+    'priorities': {
+        'articles': 0.5,
+        'indexes': 0.5,
+        'pages': 0.5
+    }
+}
+
+TAG_SAVE_AS = ''
+CATEGORY_SAVE_AS = ''
+AUTHOR_SAVE_AS = ''
+
+# elegant theme specific settings
+LANDING_PAGE_ABOUT = {
+    'title': 'Hello, world!',
+    'details': ''
+}
+
+FILENAME_METADATA = '(?P<date>\d{4}-\d{2}-\d{2})_(?P<slug>.*)'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None

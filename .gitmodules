@@ -1,0 +1,6 @@
+[submodule "themes/pelican-elegant"]
+	path = themes/pelican-elegant
+	url = git@github.com:juzbox-dot-com/pelican-elegant.git
+[submodule "plugins"]
+	path = plugins
+	url = https://github.com/getpelican/pelican-plugins
