@@ -16,7 +16,7 @@ git:
   submodules: false
 env:
   global:
-  - secure: "H1s1b90h/p0qpVXaJ1ztrRPztlo4pwiCrzyJJhhPWkmxGatdbKAMPbLjppvhcZOh/uSrVml1KymsNoL/etK/NquNkJqVhR7TOpAnjsdULFSpwGe7Gvp/gI8nUiOIc5GXmlf3QDYw6C1QDhqajnXW6M7i0vu/fBRhW8WX15IYMIM="
+  - secure: "cjf5GfseON9KKv+wtfqpkm0Cm2xukMvWWBB1Oh1QquvsTr48+yDJqjRsORlceAHrOMaO4iV+SaPk4RETaihbfrdJlh3sse4a5lg8tEtM6OntgSypcmKRgy3w72mRe5CEoJ4A2R6QFgerHo6W1XHwTHYEVLwexPwiHDD3RzWATbo="
 before_install:
   - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
   - git submodule update --init --recursive
