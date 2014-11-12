@@ -1,14 +1,14 @@
 Title: Travis CIを使った自動build & deploy
-Category: misc
+Category: tech
 Tags: travis, pelican, github
 
 ![Travis CI]({filename}/static/travis-mascot.png)
 
-静的サイトジェネレータでは，記事を書いたあと，手元の環境でコンパイルし，それをアップロードするのが普通の手順ですが，継続的インテグレーション(CI)サービスを使うことで，コンパイル & アップロードをCIサービス上で行うことができます．記事を書いて，そのソースをcommit, pushすれば，しばらくすると勝手にサイトが更新されているというわけです．素敵ですね．これなら出先など，自分のPCが使えない環境でも，blogを更新できますよ〜．
+静的サイトジェネレータでは，記事を書いたあと，手元の環境でビルドし，それをデプロイするのが普通の手順ですが，継続的インテグレーション(CI)サービスを使うことで，ビルド & デプロイをCIサービス上で行うことができます．記事を書いて，そのソースをcommit, pushすれば，しばらくすると勝手にサイトが更新されているというわけです．素敵ですね．これなら出先など，自分のPCが使えない環境でも，blogを更新できますよ〜．
 
 今回は，サイトのホストとしてGitHub Pagesを用い，CIはGitHubの公開リポジトリに対しては無料で利用できるTravis CIを用いました．GitHub Pagesは独自ドメインにも対応しており，staticなファイルのホストに限っていえば，とても良い選択肢に思えます．
 
-PelicanのソースをGitHub上に載せておき，Travis CI上でPelicanを動かしてコンパイルし，それをGitHub pageのリポジトリ(username/username.github.ioなど)に自動でdeployさせるように設定します．ソースリポジトリにpushされると，CIがトリガされて勝手に走ります．
+PelicanのソースをGitHub上に載せておき，Travis CI上でPelicanを動かしてビルドし，それをGitHub pageのリポジトリ(username/username.github.ioなど)に自動でdeployさせるように設定します．ソースリポジトリにpushされると，CIがトリガされて勝手に走ります．
 
 若干古い記事ですが，基本的には http://zonca.github.io/2013/09/automatically-build-pelican-and-publish-to-github-pages.html の手順通りでうまくいきました．
 
