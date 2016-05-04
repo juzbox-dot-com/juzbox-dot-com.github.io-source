@@ -16,9 +16,14 @@ git:
   submodules: false
 env:
   global:
-  - secure: "cjf5GfseON9KKv+wtfqpkm0Cm2xukMvWWBB1Oh1QquvsTr48+yDJqjRsORlceAHrOMaO4iV+SaPk4RETaihbfrdJlh3sse4a5lg8tEtM6OntgSypcmKRgy3w72mRe5CEoJ4A2R6QFgerHo6W1XHwTHYEVLwexPwiHDD3RzWATbo="
+    secure: XAUliez1S6kC29VPW3enyKVxGMLlVafmirprzsP+Mt85NWtbkH/UvfaOs7IT8BGGfjtLToXhPdIl6IDaQ7ctkx4x6ggLEUTwtoDt7K7gNwYbUjo74IKtUKk0MpInLocnYveRVnLdvNd5yIsG+33i7kdMJUHDzue8Ei72Lvn2jBo=
 before_install:
-  - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
-  - git submodule update --init --recursive
-  - rm -rf plugins/pandoc_reader
+- sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
+- git submodule update --init --recursive
+- rm -rf plugins/pandoc_reader
+- echo -e "Host github.com\n\tStrictHostKeyChecking no\nIdentityFile ~/.ssh/deploy.key\n" >> ~/.ssh/config
+- openssl aes-256-cbc -k "$SERVER_KEY" -in .travis/deploy_key.enc -d -a -out deploy.key
+- cp deploy.key ~/.ssh/
+- chmod 600 ~/.ssh/deploy.key
+
 
