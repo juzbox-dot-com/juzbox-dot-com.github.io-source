@@ -19,7 +19,7 @@ ARTICLE_SAVE_AS = '{date:%Y-%m-%d}/{slug}/index.html'
 # Plugins
 PLUGIN_PATHS = ['plugins']
 PLUGINS = ['sitemap', 'extract_toc', 'tipue_search', 'liquid_tags.img', 'liquid_tags.video', 'liquid_tags.youtube', 'liquid_tags.vimeo', 'liquid_tags.flickr']
-MD_EXTENSIONS = ['codehilite(css_class=highlight)', 'extra', 'headerid', 'toc', 'linkify', 'fenced_code', 'del_ins', 'tables']
+MD_EXTENSIONS = ['codehilite(css_class=highlight)', 'extra', 'headerid', 'linkify', 'fenced_code', 'del_ins', 'tables', 'toc']
 
 DIRECT_TEMPLATES = (('index', 'tags', 'categories','archives', 'search', '404'))
 STATIC_PATHS = ['theme/images', 'static']

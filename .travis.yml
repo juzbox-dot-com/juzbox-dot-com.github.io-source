@@ -3,7 +3,7 @@ branches:
   - master
 language: python
 python:
-- 3.4
+- 3.5
 install:
 - pip install -r requirements.txt --use-mirrors
 script:
@@ -20,5 +20,6 @@ env:
 before_install:
   - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
   - git submodule update --init --recursive
+  - rm -rf plugins/pandoc_reader
 after_success: bash deploy.sh
 
