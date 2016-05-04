@@ -10,7 +10,7 @@ THEME = 'themes/pelican-elegant'
 PATH = 'content'
 TIMEZONE = 'Asia/Tokyo'
 DEFAULT_LANG = 'ja'
-
+LOCALE = 'ja_JP'
 DEFAULT_DATE_FORMAT = '%Y/%m/%d(%a)'
 STATIC_EXCLUDE_SOURCES = False
 ARTICLE_URL = '{date:%Y-%m-%d}/{slug}/'
