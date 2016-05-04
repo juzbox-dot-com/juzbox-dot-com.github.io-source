@@ -7,7 +7,7 @@ python:
 install:
 - pip install -r requirements.txt --use-mirrors
 script:
-- make publish
+- make publish github
 notifications:
   email:
     on_success: always
@@ -21,5 +21,4 @@ before_install:
   - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
   - git submodule update --init --recursive
   - rm -rf plugins/pandoc_reader
-after_success: bash deploy.sh
 

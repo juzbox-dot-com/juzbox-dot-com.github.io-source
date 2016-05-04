@@ -4,3 +4,4 @@ fabric
 BeautifulSoup4
 mdx_del_ins
 -e git://github.com/daGrevis/mdx_linkify.git#egg=mdx_linkify
+ghp-import
