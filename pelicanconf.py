@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = 'M K'
+AUTHOR = 'Masahiro Kiyota'
 SITENAME = 'Juzbox.com'
 SITEURL = 'www.juzbox.com'
 THEME = 'themes/pelican-elegant'
@@ -11,13 +11,20 @@ PATH = 'content'
 TIMEZONE = 'Asia/Tokyo'
 DEFAULT_LANG = 'ja'
 
+DEFAULT_DATE_FORMAT = '%Y/%m/%d(%a)'
+STATIC_EXCLUDE_SOURCES = False
+ARTICLE_URL = '{date:%Y-%m-%d}/{slug}/'
+ARTICLE_SAVE_AS = '{date:%Y-%m-%d}/{slug}/index.html'
+
 # Plugins
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ['sitemap', 'extract_toc', 'tipue_search']
+PLUGINS = ['sitemap', 'extract_toc', 'tipue_search', 'liquid_tags.img', 'liquid_tags.videos', 'liquid_tags.youtube', 'liquid_tags.vimeo', 'liquid_tags.flickr']
 MD_EXTENSIONS = ['codehilite(css_class=highlight)', 'extra', 'headerid', 'toc', 'linkify', 'fenced_code', 'del_ins', 'tables']
 
 DIRECT_TEMPLATES = (('index', 'tags', 'categories','archives', 'search', '404'))
 STATIC_PATHS = ['theme/images', 'static']
+
+FLICKR_API_KEY = '63b02abd074242845f38e185a55d383a'
 
 EXTRA_PATH_METADATA = {
     'static/robots.txt': {'path': 'robots.txt'},
@@ -45,7 +52,7 @@ AUTHOR_SAVE_AS = ''
 # elegant theme specific settings
 LANDING_PAGE_ABOUT = {
     'title': 'Hello, world!',
-    'details': '神経科学とコンピュータに興味がある医学生の日記兼備忘録．'
+    'details': 'とあるおじさんの日記兼備忘録．'
 }
 
 FILENAME_METADATA = '(?P<date>\d{4}-\d{2}-\d{2})_(?P<slug>.*)'
