@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Labo Data Formatter</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+    #result {
+        font-family: "Times New Roman", serif;
+        font-size: 10.5pt;
+    }
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Labo Data Formatter</h1>
+                <p>入院時サマリー向けに検査値を整形します．</p>
+                <p>検査結果をオーダリングシステムから貼り付けて整形ボタンをクリックしてください．</p>
+                <p>※異なるスピッツ由来の検査を同じテキストエリアに貼り付ける時は改行が必要です．</p>
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-1 control-label">血算</label>
+                        <div class="col-sm-11">
+                            <textarea class="form-control" rows="2" id="cbc"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-1 control-label">凝固</label>
+                        <div class="col-sm-11">
+                            <textarea class="form-control" rows="1" id="coag"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-1 control-label">生化学・院外検査</label>
+                        <div class="col-sm-11">
+                            <textarea class="form-control" rows="3" id="biochem"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-1 control-label">血糖</label>
+                        <div class="col-sm-11">
+                            <textarea class="form-control" rows="1" id="bs"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-1 control-label">血沈</label>
+                        <div class="col-sm-11">
+                            <textarea class="form-control" rows="1" id="esr"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-1 control-label">尿定性</label>
+                        <div class="col-sm-11">
+                            <textarea class="form-control" rows="1" id="urin"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-sm-offset-1 col-sm-11">
+                        <button type="button" class="btn btn-primary btn-lg" id="btn-format">整形</button>
+                      </div>
+                    </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="well" id="result">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/labo_data.js"></script>
+  </body>
+</html>
