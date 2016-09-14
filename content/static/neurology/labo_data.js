@@ -87,23 +87,18 @@ function populate(parsed, format) {
 var cbc_entries = [
     { prefix: "WBC", suffix: "×千/μL", name: "WBC", unit: "×10<sup>3</sup>/μL" },
     { prefix: "Hb", suffix: "g/dL", name: "Hb", unit: "g/dL" },
-    { prefix: "Plt", suffix: "×万/μL", name: "Plt", unit: "×10<sup>4</sup>/μL" }
-];
-
-var wbc_differentiation = [
+    { prefix: "Plt", suffix: "×万/μL", name: "Plt", unit: "×10<sup>4</sup>/μL" },
     { prefix: "Neutro", suffix: "％ \\(機械値\\)", name: "Neu", unit: "%" },
     { prefix: "Lym", suffix: "％ \\(機械値\\)", name: "Ly", unit: "%" },
     { prefix: "Mono", suffix: "％ \\(機械値\\)", name: "Mono", unit: "%" },
     { prefix: "Eosino", suffix: "％ \\(機械値\\)", name: "Eo", unit: "%" },
-    { prefix: "Baso", suffix: "％ \\(機械値\\)", name: "Baso", unit: "%" },
+    { prefix: "Baso", suffix: "％ \\(機械値\\)", name: "Baso", unit: "%" }
 ];
 
 function cbc_format(ss) {
     var cbc = parse(ss, cbc_entries);
-    var diff = parse(ss, wbc_differentiation);
-    var merged = Object.assign(cbc, diff);
     var format = [ "WBC", " (", "Neu", "Ly", "Mono", "Eo", "Baso", "), ", "Hb", "Plt" ];
-    var s = populate(merged, format);
+    var s = populate(cbc, format);
     return "[血算] " + s + ".";
 }
 
@@ -111,7 +106,7 @@ var coag_entries = [
     { prefix: "PT-INR", suffix: "", name: "PT-INR", unit: "" },
     { prefix: "APTT", suffix: "秒", name: "APTT", unit: "sec" },
     { prefix: "Fbg", suffix: "mg/dl", name: "Fbg", unit: "mg/dL" },
-    { prefix: "Dタ゛イマ-", suffix: "μg/ml", name: "D-dimer", unit: "μg/mL" },
+    { prefix: "Dﾀﾞｲﾏ-", suffix: "μg/ml", name: "D-dimer", unit: "μg/mL" },
 ];
 
 function coag_format(ss) {
@@ -149,7 +144,7 @@ var bc_entries = [
     { prefix: "Glu", suffix: "mg/dL", name: "Glu", unit: "mg/dL" },
     { prefix: "HbA1c\\(N\\)", suffix: "％", name: "HbA1c", unit: "%"},
     { prefix: "VB12", suffix: "pg/mL", name: "VitB12", unit: "pg/mL" },
-    { prefix: "ヨウサン", suffix: "ng/mL", name: "Folate", unit: "ng/mL" }
+    { prefix: "ﾖｳｻﾝ", suffix: "ng/mL", name: "Folate", unit: "ng/mL" }
 ];
 
 function bc_format(ss) {
@@ -166,7 +161,7 @@ var immune_entries = [
     { prefix: "C4", suffix: "mg/dL", name: "C4", unit: "mg/dL" },
     { prefix: "SS-A", suffix: "U/mL", name: "SS-A", unit: "U/mL" },
     { prefix: "SS-B", suffix: "U/mL", name: "SS-B", unit: "U/mL" },
-    { prefix: "コウカクコウタイ", suffix: "", name: "ANA", unit: "" },
+    { prefix: "ｺｳｶｸｺｳﾀｲ", suffix: "", name: "ANA", unit: "" },
     { prefix: "ds-DNA", suffix: "IU/mL", name: "ds-DNA", unit: "IU/mL" },
     { prefix: "ss-DNA", suffix: "U/mL", name: "ss-DNA", unit: "U/mL" },
     { prefix: "MPO-ANCA", suffix: "IU/mL", name: "MPO-ANCA", unit: "IU/mL" },
